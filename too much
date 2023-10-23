@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+void BattleSysteam(); 
+int PlayerHealth = 100;
+int room = 1;
+char input = 'a';
+while (PlayerHealth >= 0 && input != 'q') { //game loop 
+		switch (room) {
+		case 1: 
+			cout << "you're in room 1, you can go (s)outh" << endl;
+			cin >> input; 
+			if (input == 's')
+				room = 1;
+			break;
+		case 2:
+			cout << "you're in room 2, you can go (n)orth" << endl;
+			cin >> input;
+			if (input == 'n')
+				room = 2;
+			break; 
+}       
+		int MonsterGen() {
+			int yummy = rand() % 100;
+			if (yummy < 50) {
+				cout << "a skeleton spawend!" << endl;
+				return 1;
+
+			}
+			else {
+				cout << "a spider appear and attacks!" << endl;
+				return 2;
+			
+			}
+		}
+		Void BattleSysteam() {
+			int MosterHealth = 20;
+			while (MonstyerHealth > 0 && PlayerHealth > 0) {
+				cout << "the monster attacks you for 10 dmg!" << endl;
+				PlayerHealth -= 10;
+				cout << " you attack the monster for 10 dmg!" << endl;
+				MonsterHealthg -= 10;
+				system("pause");
+				cout << "your health is now " << PLayerHealth << " , and the monster's health is" << MonaterHealth << endl; 
+					
+			
+}     
+		
+		}
